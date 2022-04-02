@@ -14,7 +14,7 @@ Ext.define('PlayHouse.view.main.Main', {
 
         'PlayHouse.view.main.MainController',
         'PlayHouse.view.main.MainModel',
-        'PlayHouse.view.main.List'
+        'PlayHouse.view.receipt.List'
     ],
 
     controller: 'main',
@@ -22,7 +22,7 @@ Ext.define('PlayHouse.view.main.Main', {
 
     defaults: {
         tab: {
-            iconAlign: 'top'
+            iconAlign: 'center'
         },
         styleHtmlContent: true
     },
@@ -31,31 +31,14 @@ Ext.define('PlayHouse.view.main.Main', {
 
     items: [
         {
-            title: 'Home',
-            iconCls: 'x-fa fa-home',
-            layout: 'fit',
-            // The following grid shares a store with the classic version's grid as well!
-            items: [{
-                xtype: 'mainlist'
-            }]
-        },{
-            title: 'Users',
-            iconCls: 'x-fa fa-user',
-            bind: {
-                html: '{loremIpsum}'
-            }
-        },{
-            title: 'Groups',
-            iconCls: 'x-fa fa-users',
-            bind: {
-                html: '{loremIpsum}'
-            }
-        },{
-            title: 'Settings',
-            iconCls: 'x-fa fa-cog',
-            bind: {
-                html: '{loremIpsum}'
-            }
+            // title: 'Receipts',
+            iconCls: 'x-fa fa-ticket',
+            xtype: 'receiptlist'
+        },
+        {
+            // title: 'Groups',
+            iconCls: 'x-fa fa-balance-scale',
+            disabled: true
         }
     ]
 });

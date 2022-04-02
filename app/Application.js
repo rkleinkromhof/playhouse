@@ -5,6 +5,9 @@
  */
 Ext.define('PlayHouse.Application', {
     extend: 'Ext.app.Application',
+    requires: [
+        'PlayHouse.util.SettingsManager'
+    ],
 
     name: 'PlayHouse',
 
@@ -15,17 +18,13 @@ Ext.define('PlayHouse.Application', {
         }
     },
 
-    stores: [
-        // TODO: add global / shared stores here
-    ],
-
-    launch: function () {
-        // TODO - Launch the application
+    launch: function() {
+        PlayHouse.SettingsManager.init();
     },
 
-    onAppUpdate: function () {
+    onAppUpdate: function() {
         Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
-            function (choice) {
+            function(choice) {
                 if (choice === 'yes') {
                     window.location.reload();
                 }

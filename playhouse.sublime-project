@@ -3,6 +3,15 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"path": "D:\\workspace\\sencha\\workspace\\ext-6.2.0\\modern\\modern\\src"
+		},
+		{
+			"path": "D:\\workspace\\sencha\\workspace\\ext-6.2.0\\packages\\core\\src"
+		},
+		{
+			"path": "D:\\workspace\\sencha\\workspace\\ext-6.2.0\\packages\\core\\overrides"
 		}
 	]
 }
